@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome Quiz App | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>VCTESTE</title>
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
-    <div class="start_btn"><button>Começar Quiz</button></div>
-
+    <div class="start_btn"><button>Comecar Quiz</button></div>
+    
     <div class="info_box">
         <div class="info-title"><span>Regras</span></div>
         <div class="info-list">
-            <div class="info">1. Você terá apenas <span>15 segundos</span> para cada questão.</div>
-            <div class="info">2. Assim que selecionar uma questão, não poderá ser desfeita.</div>
-            <div class="info">3. Você não pode selecionar uma opção quando o tempo acabar.</div>
-            <div class="info">4. Você não pode sair do VCTESTE enquanto estiver jogando.</div>
-            <div class="info">5. Você receberá os pontos baseados na sua respostas corretas.</div>
+            <div class="info">1. Voce tera apenas <span>15 segundos</span> para cada questao.</div>
+            <div class="info">2. Assim que selecionar uma questao, nao podera ser desfeita.</div>
+            <div class="info">3. Voce nao pode selecionar uma opcao quando o tempo acabar.</div>
+            <div class="info">4. Voce nao pode sair do VCTESTE enquanto estiver jogando.</div>
+            <div class="info">5. Voce recebera os pontos baseados na sua respostas corretas.</div>
         </div>
         <div class="buttons">
             <button class="quit">Sair do VCTESTE</button>
             <button class="restart">Continuar</button>
+            <button class="highscore_btn">High Score</button>
         </div>
     </div>
 
@@ -36,42 +37,35 @@
         </header>
         <section>
             <div class="que_text">
-                <!-- Here I've inserted question from JavaScript -->
+                <!-- perguntas -->
             </div>
             <div class="option_list">
-                <!-- Here I've inserted options from JavaScript -->
+                <!-- opções -->
             </div>
         </section>
-
-        <!-- footer of Quiz Box -->
+        <!-- footer do quiz -->
         <footer>
             <div class="total_que">
-                <!-- Here I've inserted Question Count Number from JavaScript -->
+                <!-- contagem das perguntas em Javascript -->
             </div>
-            <button class="next_btn">Próxima Pergunta</button>
+            <button class="next_btn">Proxima Pergunta</button>
         </footer>
     </div>
-
-    <!-- Result Box -->
+    <!-- Resultados -->
     <div class="result_box">
         <div class="icon">
             <i class="fas fa-crown"></i>
         </div>
-        <div class="complete_text">Você completou o VCTESTE!</div>
+        <div class="complete_text">Voce completou o VCTESTE!</div>
         <div class="score_text">
-            <!-- Here I've inserted Score Result from JavaScript -->
+            <!-- Score Results -->
         </div>
         <div class="buttons">
             <button class="restart">Jogar novamente</button>
             <button class="quit">Sair</button>
         </div>
     </div>
-
-    <!-- Inside this JavaScript file I've inserted Questions and Options only -->
     <script src="js/questions.js"></script>
-
-    <!-- Inside this JavaScript file I've coded all Quiz Codes -->
     <script src="js/script.js"></script>
-
 </body>
 </html>
