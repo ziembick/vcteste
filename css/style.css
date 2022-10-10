@@ -35,3 +35,7 @@ body {
     cursor: pointer;
 }
 
+.start_btn button:hover{
+    background: #D3D3D3;
+}
+
