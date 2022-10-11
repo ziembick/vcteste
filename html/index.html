@@ -19,7 +19,7 @@
             <div class="info">4. Voce nao pode sair do VCTESTE enquanto estiver jogando.</div>
             <div class="info">5. Voce recebera os pontos baseados na sua respostas corretas.</div>
         </div>
-        <div class="buttons">
+        <div class="buttons" id="botoes">
             <button class="quit">Sair</button>
             <button class="restart">Continuar</button>
             <button class="highscore_btn">High Score</button>
@@ -38,15 +38,31 @@
         <section>
             <div class="que_text">
                 <!-- perguntas -->
+                <span>What does HTML stand for?</span>
             </div>
             <div class="option_list">
                 <!-- opções -->
+                <div class="option">
+                    <span>Hyper Text Preprocessor</span>
+                    <div class="icon tick"><i class="fas fa-check"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Markup Language</span>
+                    <div class="icon cross"><i class="fas fa-times"></i></div>
+                </div>
+                <div class="option">
+                    <span>Hyper Text Multiple Language</span>
+                </div>
+                <div class="option">
+                    <span>Hyper Tool Multi Language</span>
+                </div>
             </div>
         </section>
         <!-- footer do quiz -->
         <footer>
             <div class="total_que">
                 <!-- contagem das perguntas em Javascript -->
+                <span><p>2</p>de<p>5</p>Perguntas</span>
             </div>
             <button class="next_btn">Proxima Pergunta</button>
         </footer>
