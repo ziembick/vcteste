@@ -26,6 +26,15 @@ body {
                 0px 6px 208px 0 rgba(0,0,0,0.19);
 }
 
+.info_box.activeInfo{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+
+
 /* styling do botao */
 
 .start_btn button {
