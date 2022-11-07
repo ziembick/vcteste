@@ -32,9 +32,10 @@ body {
 .quiz_box.activeQuiz {
     z-index: 5;
     opacity: 1;
-    pointer-events: none;
+    pointer-events: auto;
     transform: translate(-50%, -50%) scale(0.9);
 }
+
 
 
 
@@ -387,3 +388,7 @@ footer .next_btn:hover {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
+/* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */ 
+
+
