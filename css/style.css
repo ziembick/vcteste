@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Valorant';
     src: url(../fonts/Valorant\ Font.ttf);
@@ -28,7 +29,7 @@ body {
 }
 
 .info_box.activeInfo,
-.quiz_box.activeQuiz{
+.quiz_box.activeQuiz {
     z-index: 5;
     opacity: 1;
     pointer-events: none;
