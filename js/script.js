@@ -5,5 +5,9 @@ const continue_btn = info_box.querySelector(".buttons .restart");
 
 // se o botão de começãr o quiz for clicado
 start_btn.onclick = () => {
-    info_box.classList.add("activeInfo");
+    info_box.classList.add("activeInfo"); // show info box
+}
+
+exit_btn.onclick = () => {
+    info_box.classList.remove("activeInfo"); // hide info box
 }
