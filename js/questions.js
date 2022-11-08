@@ -12,7 +12,7 @@ let questions = [
     },
     {   
         numb: 2,
-        question: "What does HTML stand for?",
+        question: "Questao teste 2",
         answer: "",
         options: [
             "Hyper Text Preprocessor",
@@ -23,7 +23,7 @@ let questions = [
     },
     {   
         numb: 3,
-        question: "What does HTML stand for?",
+        question: "Questão teste 3",
         answer: "",
         options: [
             "Hyper Text Preprocessor",
@@ -34,7 +34,7 @@ let questions = [
     },
     {   
         numb: 4,
-        question: "What does HTML stand for?",
+        question: "Questao teste 4",
         answer: "",
         options: [
             "Hyper Text Preprocessor",
@@ -45,7 +45,7 @@ let questions = [
     },
     {   
         numb: 5,
-        question: "What does HTML stand for?",
+        question: "Questao teste 5",
         answer: "",
         options: [
             "Hyper Text Preprocessor",
