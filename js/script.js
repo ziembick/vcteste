@@ -65,5 +65,11 @@ function queCounter (index) {
 
 function optionSelected (answer){
     let userAns = answer.textContent;
-    console.log(userAns)
+    let correctAns = questions[que_count].answer;
+    if (userAns == correctAns){
+        console.log("Answer is correct")
+    }else {
+        console.log("Answer is wrong")
+    }
+    
 }
