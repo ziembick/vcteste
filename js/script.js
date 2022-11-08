@@ -73,6 +73,14 @@ function optionSelected (answer){
     }else {
         answer.classList.add("incorrect")
         console.log("Answer is wrong")
+
+        //se resposta incorreta automaticamente seleciona a resposta correta
+        for (let i = 0; i < allOptions; i++) {
+            if (option_list.children[i].textContent == correctAns){
+                option_list.children[i].setAttribute("class", "option correct")
+            }
+        }
+
     }
     
     //quando usuário disabilitar todas opções
