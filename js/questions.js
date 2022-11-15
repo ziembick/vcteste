@@ -13,7 +13,7 @@ let questions = [
     {   
         numb: 2,
         question: "Questao teste 2",
-        answer: "",
+        answer: "Hyper Text Preprocessor",
         options: [
             "Hyper Text Preprocessor",
             "Hyper Text Markup Language",
@@ -24,7 +24,7 @@ let questions = [
     {   
         numb: 3,
         question: "Questão teste 3",
-        answer: "",
+        answer: "Hyper Text Multiple Language",
         options: [
             "Hyper Text Preprocessor",
             "Hyper Text Markup Language",
@@ -35,7 +35,7 @@ let questions = [
     {   
         numb: 4,
         question: "Questao teste 4",
-        answer: "",
+        answer: "Hyper Text Markup Language",
         options: [
             "Hyper Text Preprocessor",
             "Hyper Text Markup Language",
@@ -46,7 +46,7 @@ let questions = [
     {   
         numb: 5,
         question: "Questao teste 5",
-        answer: "",
+        answer: "Hyper Text Markup Language",
         options: [
             "Hyper Text Preprocessor",
             "Hyper Text Markup Language",
