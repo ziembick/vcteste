@@ -5,6 +5,7 @@ const continue_btn = info_box.querySelector(".buttons .restart");
 const quiz_box = document.querySelector(".quiz_box");
 const option_list = document.querySelector(".option_list");
 const timeCount = quiz_box.querySelector(".timer .timer_sec");
+const timeLine = quiz_box.querySelector("header .time_line");
 
 // se o botão de começãr o quiz for clicado
 start_btn.onclick = () => {
@@ -23,12 +24,14 @@ continue_btn.onclick = () => {
     showQuestions(0);
     queCounter(1);
     startTimer(15);
+    startTimerLine(0)
 }
 
 let que_count = 0;
 let que_numb = 1;
 let counter;
 let timeValue = 15;
+let widthValue = 0;
 
 const next_btn = quiz_box.querySelector(".next_btn");
 
@@ -41,6 +44,8 @@ next_btn.onclick = () => {
         queCounter(que_numb);
         clearInterval(counter);
         startTimer(timeValue);
+        clearInterval(counterLine);
+        startTimerLine(widthValue);
     }else{
         console.log("Questions completed");
     }
@@ -115,6 +120,16 @@ function startTimer(time) {
     }
 }
 
+function startTimerLine(time) {
+    counterLine = setInterval(timer, 29);
+    function timer(){
+        time += 1;
+        timeLine.style.width = time + "px"
+        if(time > 549){
+            clearInterval(counterLine);     
+        }
+    }
+}
 
 
 
