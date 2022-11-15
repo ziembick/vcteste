@@ -6,6 +6,7 @@ const quiz_box = document.querySelector(".quiz_box");
 const option_list = document.querySelector(".option_list");
 const timeCount = quiz_box.querySelector(".timer .timer_sec");
 const timeLine = quiz_box.querySelector("header .time_line");
+const timeOff = quiz_box.querySelector("header .time_left_txt");
 
 // se o botão de começãr o quiz for clicado
 start_btn.onclick = () => {
@@ -55,6 +56,7 @@ restart_quiz.onclick = () => {
     clearInterval(counterLine);
     startTimerLine(widthValue);
     next_btn.style.display = "none";
+    timeOff.textContent = "Tempo Restante";
 }
 
 quit_quiz.onclick = () => {
@@ -73,7 +75,10 @@ next_btn.onclick = () => {
         clearInterval(counterLine);
         startTimerLine(widthValue);
         next_btn.style.display = "none";
+        timeOff.textContent = "Tempo Restante";
     }else{
+        clearInterval(counter);
+        clearInterval(counterLine);
         console.log("Questions completed");
         showResultBox();
     }
@@ -112,11 +117,11 @@ function optionSelected (answer){
         userScore += 1;
         console.log(userScore)
         answer.classList.add("correct")
-        console.log("Answer is correct");
+        console.log("Resposta está correta");
         answer.insertAdjacentHTML("beforeend", tickIcon)
     }else {
         answer.classList.add("incorrect")
-        console.log("Answer is wrong")
+        console.log("Resposta está incorreta")
         answer.insertAdjacentHTML("beforeend", crossIcon)
         //se resposta incorreta automaticamente seleciona a resposta correta
         for (let i = 0; i < allOptions; i++) {
@@ -145,7 +150,7 @@ function showResultBox() {
         scoreText.innerHTML = scoreTag
     }
     else if(userScore > 1){
-        let scoreTag = '<span>Ok! Voce acertou <p>'+ userScore +'</p> de <p>'+ questions.length + '</p></span>'
+        let scoreTag = '<span>Boa! Voce acertou <p>'+ userScore +'</p> de <p>'+ questions.length + '</p></span>'
         scoreText.innerHTML = scoreTag
     }
     else{
@@ -166,7 +171,22 @@ function startTimer(time) {
         }
         if(time < 0){
             clearInterval(counter);
-            timeCount.textContent = "00"
+            timeCount.textContent = "00";
+            timeOff.textContent = "Tempo Finalizado";
+
+            let correctAns = questions[que_count].answer;
+            let allOptions = option_list.children.length;
+
+            for (let i = 0; i < allOptions; i++) {
+                if (option_list.children[i].textContent == correctAns){
+                    option_list.children[i].setAttribute("class", "option correct")
+                    option_list.children[i].insertAdjacentHTML("beforeend", tickIcon)
+                }
+            }
+            for (let i = 0; i < allOptions; i++) {
+                option_list.children[i].classList.add("disabled")
+            }
+            next_btn.style.display = "block";
         }
     }
 }
