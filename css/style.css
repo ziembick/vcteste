@@ -450,6 +450,10 @@ footer .next_btn:hover {
 
 /* end page */ 
 
+a {
+    text-decoration: none;
+}
+
 .end-form-container {
     width: 100%;
     display: flex;
