@@ -114,7 +114,7 @@ function optionSelected (answer){
     let correctAns = questions[que_count].answer;
     let allOptions = option_list.children.length;
     if (userAns == correctAns){
-        userScore += 1;
+        userScore += 100;
         console.log(userScore)
         answer.classList.add("correct")
         console.log("Resposta está correta");
@@ -145,16 +145,16 @@ function showResultBox() {
     quit_quiz.classList.remove("activeQuiz"); //esconde a caixa do quiz
     result_box.classList.add("activeResult"); //mostra a caixa de resultado
     const scoreText = result_box.querySelector(".score_text");
-    if(userScore > 3){
-        let scoreTag = '<span>Parabéns! Voce acertou <p>'+ userScore +'</p> de <p>'+ questions.length + '</p></span>'
+    if(userScore > 300){
+        let scoreTag = '<span>Parabéns! Voce acertou <p>'+ userScore +'</p> pontos!</span>'
         scoreText.innerHTML = scoreTag
     }
-    else if(userScore > 1){
-        let scoreTag = '<span>Boa! Voce acertou <p>'+ userScore +'</p> de <p>'+ questions.length + '</p></span>'
+    else if(userScore > 100){
+        let scoreTag = '<span>Boa! Voce acertou <p>'+ userScore +'</p> pontos! </span>'
         scoreText.innerHTML = scoreTag
     }
     else{
-        let scoreTag = '<span>Desculpe, voce acertou apenas <p>'+ userScore +'</p> de <p>'+ questions.length + '</p></span>'
+        let scoreTag = '<span>Desculpe, voce acertou apenas <p>'+ userScore +'</p> pontos! </span>'
         scoreText.innerHTML = scoreTag
     }
 }
