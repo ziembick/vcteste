@@ -7,6 +7,7 @@ const option_list = document.querySelector(".option_list");
 const timeCount = quiz_box.querySelector(".timer .timer_sec");
 const timeLine = quiz_box.querySelector("header .time_line");
 const timeOff = quiz_box.querySelector("header .time_left_txt");
+const score_txt = quiz_box.querySelector("header .score_number")
 
 // se o botão de começãr o quiz for clicado
 start_btn.onclick = () => {
@@ -100,8 +101,6 @@ function showQuestions (index) {
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 }
-
-
 
 
 let tickIcon = '<div class="icon tick"><i class="fas fa-check"></i></div>';
